@@ -120,3 +120,36 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* Chat widget scrollbar */
+.custom-chat-scroll {
+  scrollbar-width: thin;                /* Firefox */
+  scrollbar-color: rgba(148, 163, 184, 0.7) transparent;
+}
+
+/* Chrome / Edge / Safari */
+.custom-chat-scroll::-webkit-scrollbar {
+  width: 6px;
+}
+
+.custom-chat-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-chat-scroll::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    to bottom,
+    rgba(129, 140, 248, 0.9),
+    rgba(56, 189, 248, 0.8)
+  );
+  border-radius: 999px;
+}
+
+.custom-chat-scroll::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(
+    to bottom,
+    rgba(79, 70, 229, 1),
+    rgba(14, 165, 233, 1)
+  );
+}
+
