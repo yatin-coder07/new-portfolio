@@ -68,7 +68,7 @@ export default function BioSection() {
 
   return (
     <>
-    <div className="text-center" >
+    <div className="text-center" id="about" >
       <h1 className="text-4xl font-extrabold text-slate-900 dark:text-white">About Me</h1>
     </div>
      <section className="relative max-w-5xl mx-auto px-6 py-20 bg-white dark:bg-black transition-colors duration-500">
