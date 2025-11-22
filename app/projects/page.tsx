@@ -1,7 +1,6 @@
 // app/projects/page.tsx
 "use client";
 
-
 import { motion } from "framer-motion";
 
 type Project = {
@@ -16,6 +15,7 @@ type Project = {
   tech: string[];
   highlights: string[];
   demoUrl?: string;
+  githubUrl?: string;
 };
 
 const projects: Project[] = [
@@ -36,6 +36,7 @@ const projects: Project[] = [
       "Stripe-powered subscriptions with usage-based intent.",
     ],
     demoUrl: "https://my-reciept-app.vercel.app/", // Replace with your live demo link
+    githubUrl: "https://github.com/your-username/ai-receipt-scanner", // replace with real repo
   },
   {
     id: "ai-email-finder",
@@ -54,6 +55,7 @@ const projects: Project[] = [
       "Scoring system to prioritize best leads first.",
     ],
     demoUrl: "https://vector-embedded-email-app.vercel.app/", // Replace with your live demo link
+    githubUrl: "https://github.com/your-username/ai-email-finder", // replace with real repo
   },
 ];
 
@@ -147,20 +149,22 @@ export default function Projects(): JSX.Element {
                     ))}
                   </div>
 
-                  {/* Buttons */}
+                  {/* Buttons – ONLY demo + GitHub */}
                   <div className="mt-4 flex flex-wrap gap-3">
-                    <motion.a
-                      whileHover={{ y: -2, scale: 1.02 }}
-                      whileTap={{ scale: 0.98 }}
-                      href={`/project/${project.id}`}
-                      className="inline-flex items-center px-4 py-2 rounded-xl text-sm font-semibold
-                                 bg-indigo-600 text-white shadow-md hover:shadow-lg transition-all"
-                    >
-                      View full case study
-                    </motion.a>
                     {project.demoUrl && (
                       <a
                         href={project.demoUrl}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="inline-flex items-center px-4 py-2 rounded-xl text-sm font-semibold
+                                   bg-indigo-600 text-white shadow-md hover:shadow-lg transition-all"
+                      >
+                        Live demo
+                      </a>
+                    )}
+                    {project.githubUrl && (
+                      <a
+                        href={project.githubUrl}
                         target="_blank"
                         rel="noreferrer"
                         className="inline-flex items-center px-3 py-2 rounded-xl text-xs md:text-sm font-medium
@@ -168,7 +172,7 @@ export default function Projects(): JSX.Element {
                                    text-slate-800 dark:text-slate-200
                                    hover:bg-white/20 dark:hover:bg-white/10 transition"
                       >
-                        Live demo
+                        GitHub repo
                       </a>
                     )}
                   </div>
@@ -189,7 +193,7 @@ export default function Projects(): JSX.Element {
                         <div className="rounded-xl bg-white/5 px-2 py-2">
                           <div className="text-slate-400 text-[0.65rem] mb-1">Stack</div>
                           <div className="font-semibold text-slate-100 text-[0.7rem]">
-                            {project.id === "receipt" ? "Convex" : "Supabase"}
+                            {project.id === "ai-receipt-scanner" ? "Convex" : "Supabase"}
                           </div>
                         </div>
                         <div className="rounded-xl bg-white/5 px-2 py-2">
@@ -202,7 +206,7 @@ export default function Projects(): JSX.Element {
                     <div className="mt-4 text-[0.7rem] border-t border-slate-700 pt-3">
                       <div className="text-slate-400 mb-1">Focus</div>
                       <div className="text-slate-100">
-                        {project.id === "receipt"
+                        {project.id === "ai-receipt-scanner"
                           ? "Automating financial workflows with AI."
                           : "Making lead discovery less painful."}
                       </div>
