@@ -183,7 +183,7 @@ export default function ContactSection() {
   target="_blank"
   rel="noopener noreferrer"
 >
-  Whatsapp <MessageCircleIcon className="inline-block w-4 h-4 mb-0.5 mr-1" /> 
+  Whatsapp  <MessageCircleIcon className="inline-block w-4 h-4 mb-0.5 mr-1" /> 
 </a>
              </span>
             </p>
