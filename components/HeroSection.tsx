@@ -59,6 +59,13 @@ export default function HeroSection(): JSX.Element {
               >
                 View projects
               </motion.a>
+              <a
+                href="/resume.pdf"
+                download={"resume.pdf"}
+                className="inline-flex items-center px-5 py-3 rounded-2xl   border border-white/10 text-sm font-medium text-slate-900 dark:text-white backdrop-blur-md dark:bg-indigo-600"
+              >
+                Download resume
+              </a>
 
               <motion.a
                 whileHover={{ scale: 1.03 }}
@@ -68,13 +75,7 @@ export default function HeroSection(): JSX.Element {
                 Contact
               </motion.a>
 
-              <a
-                href="/resume.pdf"
-                download={"resume.pdf"}
-                className="inline-flex items-center px-4 py-3 rounded-2xl border border-white/8 text-sm font-medium text-slate-700 dark:text-slate-300 bg-transparent"
-              >
-                Download resume
-              </a>
+              
             </div>
 
             <div className="mt-6 text-sm text-slate-500 dark:text-slate-400">
