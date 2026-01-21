@@ -10,7 +10,7 @@ export default function Home() {
    <>
    {/*Navbar */}
    {/*Hero */}
-  
+   
    
    <div className="dark:bg-black">
     <HeroSection/>

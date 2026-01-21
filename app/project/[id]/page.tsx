@@ -14,14 +14,14 @@ export default async function ProjectPage({
 
   if (!project) return notFound();
 
-  // optional links you'll add in lib/projects.ts later
+
   const demoUrl = (project as any).demoUrl as string | undefined;
   const githubUrl = (project as any).githubUrl as string | undefined;
 
   return (
     <main className="min-h-screen bg-white dark:bg-black transition-colors duration-500">
       <section className="max-w-6xl mx-auto px-6 py-24 md:py-28 space-y-12">
-        {/* HEADER CARD */}
+      
         <div className="relative rounded-3xl p-[1px] bg-gradient-to-br from-indigo-500/60 via-purple-500/40 to-sky-500/40">
           <div className="rounded-3xl bg-white/85 dark:bg-slate-950/90 border border-white/60 dark:border-white/10 backdrop-blur-2xl px-5 py-5 md:px-7 md:py-6 shadow-2xl space-y-4">
             <div className="flex flex-wrap items-start justify-between gap-4">
@@ -34,7 +34,7 @@ export default async function ProjectPage({
                 </p>
               </div>
 
-              {/* Actions: GitHub + Live demo stacked */}
+            
               <div className="flex flex-col items-stretch gap-2 text-xs md:text-sm min-w-[160px]">
                 {githubUrl && (
                   <a
