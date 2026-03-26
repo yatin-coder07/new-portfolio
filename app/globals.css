@@ -45,6 +45,7 @@
 
 :root {
   --radius: 0.625rem;
+  --transparent: transparent;
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
   --card: oklch(1 0 0);
@@ -153,3 +154,79 @@
   );
 }
 
+
+
+/* Aurora animation */
+@keyframes aurora {
+  from {
+    background-position: 50% 50%, 50% 50%;
+  }
+  to {
+    background-position: 350% 50%, 350% 50%;
+  }
+}
+
+.animate-aurora {
+  animation: aurora 60s linear infinite;
+}
+
+/* REQUIRED VARIABLES */
+:root {
+  --white: #ffffff;
+  --black: #000000;
+  --transparent: transparent;
+
+  --blue-500: #3b82f6;
+  --blue-400: #60a5fa;
+  --blue-300: #93c5fd;
+
+  --indigo-300: #a5b4fc;
+  --violet-200: #ddd6fe;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes appear-zoom {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-appear {
+  animation: appear 0.5s ease-out forwards;
+}
+
+.animate-appear-zoom {
+  animation: appear-zoom 0.5s ease-out forwards;
+}
+
+/* delays */
+.delay-100 { animation-delay: 100ms; }
+.delay-300 { animation-delay: 300ms; }
+.delay-700 { animation-delay: 700ms; }
+.delay-1000 { animation-delay: 1000ms; }
+
+/* brand colors */
+:root {
+  --brand: 27 96% 61%;
+  --brand-foreground: 31 97% 72%;
+}
+
+.dark {
+  --brand: 31 97% 72%;
+  --brand-foreground: 27 96% 61%;
+}
