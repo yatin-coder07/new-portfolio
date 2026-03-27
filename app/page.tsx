@@ -59,7 +59,7 @@ export default function Home() {
      </div>
       <ProjectsPage/>
       <ContactSection/>
-      <Footer/>
+      
     </div>
     {/*Footer , contact me*/}
    </>

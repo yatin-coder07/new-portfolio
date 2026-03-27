@@ -50,8 +50,6 @@ const projects = [
     tech: [
       "Next.js",
       "TypeScript",
-      "PostgreSQL",
-      "Django REST",
       "OpenAI",
     ],
     highlights: [
@@ -200,7 +198,7 @@ export default function ProjectsPage() {
               </div>
 
               {/* SPACE FOR SCROLL */}
-              <div className="h-[600px]" />
+              <div className="h-[200px]" />
             </div>
           </div>
         </section>
